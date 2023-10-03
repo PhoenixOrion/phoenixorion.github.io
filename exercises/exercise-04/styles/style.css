@@ -1,0 +1,29 @@
+h1{
+    color: blueviolet;
+    size: 40px;
+}
+p{
+    color: rosybrown;
+}
+a{
+    text-decoration: none;
+}
+#index nav li:nth-child(1) a, #photograph nav li:nth-child(2) a, #some-stuff nav li:nth-child(3) a 
+{
+  color: white;
+  text-decoration: none;
+  background-color: black;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+ul a {
+    padding: 10px;
+}
+li{
+    list-style: none;
+}
+body{
+    font: sans-serif;
+}
