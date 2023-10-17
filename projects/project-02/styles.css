@@ -1,0 +1,79 @@
+.header{
+    padding: 0 auto;
+    margin: 0 ;
+    width: 1440px;
+    height: 85px;
+    color: white;
+    font-family: Changa;
+    font-weight: 600;
+    background-color: #383838;
+    
+
+}
+#hero{
+    margin: 0 auto;
+    width: 1440px;
+    height: 290px;
+    background-image: url('https://placehold.co/1440x290');
+}
+.logo{
+    font-family: Changa One;
+    font-size: 48;
+    font-style: italic;
+    text-align: center;
+    color: #f64343;
+}
+.page-header{
+    width: 945px;
+    height: 95px;
+}   
+.supplies-card{
+    width: 300px;
+    height: 500px;
+    padding: 50px;
+}
+.tips-card{
+    width: 400px;
+    height: 900px;
+    padding: 30px;
+}
+.home-card{
+    width: 540px;
+    height: 700px;
+    padding: 50px;
+}
+.step-card{
+
+}
+.step-button{
+
+}
+.next-button{
+
+}
+.prev-button{
+
+}
+body{
+    margin: 0 auto;
+}
+main{
+width: 1440px;
+margin: 0 auto;
+}
+.extended-footer{
+    margin: 0 auto;
+width: 1440px;
+}
+.header nav ul{
+display: flex;
+padding: 30;
+border: 20;
+list-style: none;
+}
+h1{
+    font-family: Changa One;
+    font-size: 70;
+    font-style: italic;
+    text-align: center;
+}
