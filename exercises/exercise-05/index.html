@@ -20,8 +20,9 @@
 
             </li>
         </ul>
+    </div>
     </nav>
-    <div>
+ <div class="content">
         <h1>This is the exercise home page.</h1> 
         <h3>If you shrink the window, the menu changes ooooo. <br>
             I don't quite get all the java yet...</h3>
@@ -31,11 +32,11 @@
         const togglemenu = document.getElementById('togglemenu');
         togglemenu.innerHTML = 'menu';
         togglemenu.addEventListener('click', () => {
-
+        
           document.body.classList.toggle('nav-open');
-          toggleNav.innerHTML = document.body.classList.contains('nav-open')
-            ? '&#x2715'
-            : '&#9776;';
+          togglemenu.innerHTML = document.body.classList.contains('nav-open')
+            ? 'X'
+            : 'Menu';
         });
       };
 

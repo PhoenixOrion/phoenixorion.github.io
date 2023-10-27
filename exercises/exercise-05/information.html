@@ -6,11 +6,12 @@
     <title>Exercise 5</title>
     <link rel="stylesheet" href="styles.css">
 
-
+    <script src="my-script.js"></script>
 </head>
 <body>
-    <div class="headnav">
-    <nav>
+    <button id="togglemenu">Menu</button>
+    <nav class="headnav" role="navigation">
+        <div class="inner"></div>
         <ul>
             <li>
                 <a href="index.html">Home</a>
@@ -19,8 +20,8 @@
 
             </li>
         </ul>
-    </nav>
     </div>
+    </nav>
     <h3>Some Lorem for Your Eyes to Gaze Upon</h3>
 <div class="content">
     <p>
@@ -28,5 +29,19 @@
     </p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad dolores ut voluptatibus! Illo voluptatibus, nesciunt odio animi obcaecati quibusdam at accusantium tempora dolor corporis deleniti distinctio incidunt totam voluptate earum!</p>
 </div>
+<script>
+    window.onload = () => {
+        const togglemenu = document.getElementById('togglemenu');
+        togglemenu.innerHTML = 'menu';
+        togglemenu.addEventListener('click', () => {
+        
+          document.body.classList.toggle('nav-open');
+          togglemenu.innerHTML = document.body.classList.contains('nav-open')
+            ? 'X'
+            : 'Menu';
+        });
+      };
+
+</script>
 </body>
 </html>

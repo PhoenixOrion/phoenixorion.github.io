@@ -14,7 +14,6 @@ img{
 }
 .headnav{
     background-color: forestgreen;
-    height: min-content;
 }
 .headnav li{
     list-style: none;
@@ -24,7 +23,6 @@ img{
     text-decoration: none;
     margin: 10px;
     padding: 20px;
-    width: 50px;
     text-align: center;
     background-color: gold;
     border: 2px solid black;
@@ -48,6 +46,7 @@ h1{
     text-align: center;
     background-color: yellowgreen;
     padding: 10px;
+    margin-bottom: 20px;
 }
 h3{
     font-family: sans-serif;
@@ -58,17 +57,21 @@ p{
     max-width: 500px;
 }
 @media(max-width: 720px) {
+    .inner{
+        overflow: hidden;
+    }
 
+    body.nav-open .headnav li{
+        display: grid;
+        width: auto;
+    }
     .headnav li{
-        flex-direction: column;
+        display: none
         
     }
     .headnav li a{
-        width: auto;
+        width: 100%;
         padding: 10px;
-    }
-    .inner{
-        overflow: hidden;
     }
     #togglemenu{
         display: block;

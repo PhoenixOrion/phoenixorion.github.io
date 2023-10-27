@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 
 
+    <script src="my-script.js"></script>
 </head>
 <body>
-    <div class="headnav">
-    <nav>
+    <button id="togglemenu">Menu</button>
+    <nav class="headnav" role="navigation">
+        <div class="inner"></div>
         <ul>
             <li>
                 <a href="index.html">Home</a>
@@ -19,12 +21,26 @@
 
             </li>
         </ul>
-    </nav>
     </div>
+    </nav>
     <h3>Here is some fun Ganondorf content.</h3>
     <div class="content">
         <img src="images/ganondorf_laughing.jpg" alt="Ganondorf TOTK">
         <img src="images/ganondorf-meme.jpg" alt="Ganondorf meme">
     </div>
+    <script>
+        window.onload = () => {
+            const togglemenu = document.getElementById('togglemenu');
+            togglemenu.innerHTML = 'menu';
+            togglemenu.addEventListener('click', () => {
+            
+              document.body.classList.toggle('nav-open');
+              togglemenu.innerHTML = document.body.classList.contains('nav-open')
+                ? 'X'
+                : 'Menu';
+            });
+          };
+    
+    </script>
 </body>
 </html>
