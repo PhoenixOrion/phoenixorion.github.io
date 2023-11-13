@@ -158,7 +158,13 @@ p{
     margin-top: 50px;
     flex-wrap: nowrap;
 }
-
+#togglemenu{
+    display: none;
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    text-align: center;
+}
 a:visited{
     color: #262980;
 }
@@ -172,7 +178,6 @@ div{
     .inner{
         overflow: hidden;
     }
-
     body.nav-open .nav-menu li{
         display: grid;
         width: auto;
