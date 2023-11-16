@@ -1,7 +1,7 @@
 .nav-menu {
 background-color: #262980;
 padding: 20px;
-
+border-bottom: 10px solid #cca5fe;
 }
 .nav-menu ul{
     display: flex;
@@ -19,62 +19,44 @@ a{
     text-decoration: none;
 }
 img{
-    border: 10px solid #262980;
+    border: 15px solid #262980;
     border-radius: 40px;
     margin: 10px;
     margin-top: 15px;
+    max-width: 100%;
+    height: auto;
 }
-.nav-order{
-    font-family: cherry Cream Soda;
-    color: #59269a;
-    background-color: #a9eafe;
-    width: 100px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    border: 3px solid #fd70de;
-}
-.nav-synopsis{
-    font-family: cherry Cream Soda;
-    color: #59269a;
-    background-color: #a9eafe;
-    width: 100px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    border: 3px solid #fd70de;
-}
+
+.nav-button{
+        font-family: cherry Cream Soda;
+        color: #59269a;
+        background-color: #a9eafe;
+        width: 120px;
+        height: 40px;
+        padding: 5px;
+        border-radius: 20px;
+        border: 3px solid #fde7ff;
+    }
+
 .nav-home{
     font-family: Oleo Script Swash Caps;
     color: #cca5fe;
     font-size: 40px;
+    background-color: #59269a;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 5px solid #cca5fe;
+    border-radius: 10px;
 
+}
+.nav-button a:hover{
+    color: #fd70de;
 }
 .nav-home a:visited{
     color: #cca5fe;
 }
 .nav-home a:hover{
     color: #fd70de;
-}
-.nav-review{
-    font-family: cherry Cream Soda;
-    color: #59269a;
-    background-color: #a9eafe;
-    width: 100px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    border: 3px solid #fd70de;
-}
-.nav-bio{
-    font-family: cherry Cream Soda;
-    color: #59269a;
-    background-color: #a9eafe;
-    width: 100px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    border: 3px solid #fd70de;
 }
 h1{
     font-family: Oleo Script Swash Caps;
@@ -84,31 +66,34 @@ h1{
     color: #fd70de;
 }
 h2{
-    font font-family: Oleo Script;
+    font-family: Oleo Script;
+    font-size: 60px;
+    color: #fde7ff;
+    text-align: center;
 }
+
 h3{
     font-family: Cherry Cream Soda;
     font-size: 40px;
     text-align: center;
     margin-top: 15px;
-    color: #59269a;
+    color: #a9eafe;
 }
 h4{
     font-family: cherry cream soda;
-    color: #262980;
+    color: #fde7ff;
     font-size: 30px;
 text-align: center;
-    margin-top: 25px;
 }
 h5{
     font-family: poppins;
-    color: white;
+    color: #fde7ff;
     font-size: 20px;
-
+    font-style: italic;
 }
 h6{
     font-family: poppins;
-    color: #59269a;
+    color: #a9eafe;
     font-style: italic;
     font-weight: 300;
     text-align: center;
@@ -116,10 +101,17 @@ h6{
 }
 p{
     font-family: poppins;
+    color: #fde7ff;
     font-size: 24px;
     margin-top: 15px;
     padding: 20px;
     max-width: 650px;
+    min-width: 400px;
+}
+.info-break{
+    height: 5px;
+    width: 100%;
+    background-color: #fd70de;
 }
 .pill-button{
     background-color: #fd70de;
@@ -145,18 +137,20 @@ p{
     text-align: center;
     padding-top: 50px;
     margin-top: 50px;
+    margin-right: 50px;
 }
 .order-card{
     background-position-x: right;
-    background-color: #262980;
+    background-color: #59269a;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     height: 200px;
-    min-width: 400px;
-    max-width: 600px;
-    padding-top: 20px;
+width: 600px;
+padding: 30px;
     margin-top: 50px;
     flex-wrap: nowrap;
+    position: absolute;
+    right: 0em;
 }
 #togglemenu{
     display: none;
@@ -164,6 +158,14 @@ p{
     top: 2em;
     right: 1em;
     text-align: center;
+    color: #262980;
+    background-color: #a9eafe;
+    border-radius: 20px;
+    width: 60px;
+    height: 40px;
+    border: 2px solid #262980;
+    z-index: 20;
+    font-family: oleo script;
 }
 a:visited{
     color: #262980;
@@ -174,23 +176,49 @@ a:hover{
 div{
     flex-wrap: wrap;
 }
-@media(max-width: 720px) {
+.order-card .pill-button{
+    background-color: #a9eafe;
+    border: 5px solid #cca5fe;
+}
+@media(max-width: 950px) {
     .inner{
         overflow: hidden;
     }
-    body.nav-open .nav-menu li{
-        display: grid;
+    .nav-menu{
+        display: none;
+    }
+    body.nav-open .nav-menu{
+        display: block;
+        margin: 0 auto;
+    }
+    body.nav-open .nav-menu ul{
+        display: flex;
+        flex-direction: column;
         width: auto;
     }
     .nav-menu li{
-        display: none
-        
+        margin: 10px 0 auto;
+        font-size: 13px;
     }
+    .nav-menu .nav-home a{
+        font-size: 40px;
+
+    }
+    
     .nav-menu li a{
         width: 100%;
         padding: 10px;
     }
     #togglemenu{
         display: block;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .order-card{
+
+        display: block;
+        position: fixed;
+        right: 0;
     }
 }

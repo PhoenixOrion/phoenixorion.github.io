@@ -3,25 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reviews</title>
+    <title>Reviews of Alice in Wonderland</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cherry Cream Soda">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
-
+    <script src="my-script.js"></script>
   </head>
-<body>
+<body style="background-image: url(images/alice-blurred.png);">
+  <button id="togglemenu">Menu</button>
     <div class="nav-menu">
-        <nav>
+        <nav role="navigation">
+          <div class="inner">
             <ul>
-                <li class="nav-order"><a href="order-book.html">Order</a></li>
-                <li class="nav-synopsis"><a href="synopsis.html">Synopsis</a></li>
+                <li class="nav-button"><a href="order-book.html">Order</a></li>
+                <li class="nav-button"><a href="synopsis.html">Synopsis</a></li>
                 <li class="nav-home"><a href="index.html">Alice in Wonderland</a></li>
-                <li class="nav-review"><a href="reviews.html">Reviews</a></li>
-                <li class="nav-bio"><a href="lewis-carroll.html">Biography</a></li>
+                <li class="nav-button"><a href="reviews.html">Reviews</a></li>
+                <li class="nav-button"><a href="lewis-carroll.html">Biography</a></li>
+
             </ul>
+          </div>
         </nav>
     </div>
     <h3>Reviews</h3>
@@ -49,6 +53,7 @@
             Overall, "Alice in Wonderland" is a must-read for anyone seeking an escape into a world of boundless imagination, where the ordinary becomes extraordinary, and possibilities are limited only by one's own imagination.        
             </p>
     </div>
+    <div class="info-break"></div>
     <div>
         <h4 style="width: 600px;">Review 2: A Captivating Journey into Wonderland 
             <br> Rating: ★★★★☆ </h4>      
@@ -68,6 +73,7 @@
         Though the story lacks a conventional plot structure, it is the whimsical and imaginative nature of "Alice in Wonderland" that makes it a classic. Carroll's ability to transport readers to a world where anything 
         is possible is truly remarkable. Whether you're reading it for the first time or revisiting it as an adult, "Alice in Wonderland" is a timeless masterpiece that will continue to charm and inspire generations. </p>
 </div>
+<div class="info-break"></div>
 <div class="review-card">
     <div>
         <h4 style="width: 600px;">Review 3: A Wonderland of Curiosities and Absurdities 
@@ -92,6 +98,23 @@
 <div class="pill-button">
     <a href="order-book.html">Order</a>
 </div>
+<div style="height: 100px;">
+
+</div>
+<script>
+    window.onload = () => {
+        const togglemenu = document.getElementById('togglemenu');
+        togglemenu.innerHTML = 'menu';
+        togglemenu.addEventListener('click', () => {
+        
+          document.body.classList.toggle('nav-open');
+          togglemenu.innerHTML = document.body.classList.contains('nav-open')
+            ? 'X'
+            : 'Menu';
+        });
+      };
+
+</script>
 </body>
    
 </html>

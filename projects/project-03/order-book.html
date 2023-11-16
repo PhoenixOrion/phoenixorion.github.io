@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order Book</title>
+    <title>Order Book: Alice in Wonderland</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cherry Cream Soda">
@@ -11,39 +11,64 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script Swash Caps">
 
-  </head>
-<body>
-    <div class="nav-menu">
-        <nav>
-            <ul>
-                <li class="nav-order"><a href="order-book.html">Order</a></li>
-                <li class="nav-synopsis"><a href="synopsis.html">Synopsis</a></li>
-                <li class="nav-home"><a href="index.html">Alice in Wonderland</a></li>
-                <li class="nav-review"><a href="reviews.html">Reviews</a></li>
-                <li class="nav-bio"><a href="lewis-carroll.html">Biography</a></li>
-            </ul>
-        </nav>
-    </div>
-<div>
+    <script src="my-script.js"></script>
+</head>
+<body style="background-image: url(images/alice-blurred.png);">
+<button id="togglemenu">Menu</button>
+  <div class="nav-menu">
+      <nav role="navigation">
+        <div class="inner">
+          <ul>
+            <li class="nav-button"><a href="order-book.html">Order</a></li>
+            <li class="nav-button"><a href="synopsis.html">Synopsis</a></li>
+            <li class="nav-home"><a href="index.html">Alice in Wonderland</a></li>
+            <li class="nav-button"><a href="reviews.html">Reviews</a></li>
+            <li class="nav-button"><a href="lewis-carroll.html">Biography</a></li>
+
+          </ul>
+        </div>
+      </nav>
+  </div>
+  <h2 style="margin-top: 20px;">Order Alice in Wonderland</h2>
+<h3>by Lewis Carroll</h3>
+  <div style="margin: 0 auto; display: flex;;">
     <div>
-        <img src="images/alice-in-wonderland-book.jpg" alt="">
+        <img src="images/alice-in-wonderland-book.jpg" alt="Alice in Wonderland book cover">
     </div>
     <div class="order-card">
-        <h3 style="color: #cca5fe;">Paperback: $12.99</h3>
+        <h4>Paperback: $12.99</h3>
+          <br>
         <div>
-         <div class="pill-button" style="border-color: white;">Add to Cart</div>
+         <div class="pill-button">Add to Cart</div>
     </div>
     <div class="order-card">
-        <h3 style="color: #cca5fe;">Hard-cover: $15.99</h3>
+        <h4>Hard-cover: $15.99</h3>
+          <br>
         <div>
-        <div class="pill-button" style="border-color: white;">Add to Cart</div>
+        <div class="pill-button">Add to Cart</div>
     </div>
     <div class="order-card">
-        <h3 style="color: #cca5fe;">Digital Deluxe: $10.99</h3>
+        <h4>Digital Deluxe: $10.99</h3>
+          <br>
         <div>
-        <div class="pill-button" style="border-color: white;">Add to Cart</div>
+        <div class="pill-button">Add to Cart</div>
     </div>
 </div>
+</div>
+<script>
+    window.onload = () => {
+        const togglemenu = document.getElementById('togglemenu');
+        togglemenu.innerHTML = 'menu';
+        togglemenu.addEventListener('click', () => {
+        
+          document.body.classList.toggle('nav-open');
+          togglemenu.innerHTML = document.body.classList.contains('nav-open')
+            ? 'X'
+            : 'Menu';
+        });
+      };
+
+</script>
 </body>
    
 </html>
