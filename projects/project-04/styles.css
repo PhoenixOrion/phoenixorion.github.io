@@ -80,12 +80,24 @@ ul{
     list-style: none;
     padding: 0;
 }
+.icon{
+    border: 0;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
 .page-head{
     display: flex;
     flex-direction: row;
     background-color: #6f3f67;
     height: 120px;
     margin-bottom: 30px;
+}
+.page-foot{
+    display: flex;
+    flex-direction: row;
+    background-color: #6f3f67;
+    height: 120px;
 }
 .nav-menu{
 padding-top: 60px;
@@ -175,7 +187,7 @@ a{
     font-weight: 600;
     border-radius: 50px;
 }
-.butto:hover{
+.button:hover{
     background-color: #3974AA;
     color: white;
 }
