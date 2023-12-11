@@ -412,5 +412,9 @@ justify-content: center;
     }
     .selections-food{
         max-width: fit-content;
+
+    }
+    .page-foot{
+        height: fit-content;
     }
 }
