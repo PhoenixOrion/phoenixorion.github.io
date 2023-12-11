@@ -13,7 +13,7 @@
     <script src="my-script.js"></script>
   </head>
 <body style="background-image: url(images/alice-blurred.png);">
-  <button id="togglemenu">Menu</button>
+  <button id="togglemenu">=</button>
     <div class="nav-menu">
         <nav role="navigation">
           <div class="inner">
@@ -36,13 +36,13 @@
     <script>
         window.onload = () => {
             const togglemenu = document.getElementById('togglemenu');
-            togglemenu.innerHTML = 'menu';
+            togglemenu.innerHTML = '=';
             togglemenu.addEventListener('click', () => {
             
               document.body.classList.toggle('nav-open');
               togglemenu.innerHTML = document.body.classList.contains('nav-open')
                 ? 'X'
-                : 'Menu';
+                : '=';
             });
           };
     

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quando">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <script src="my-script.js"></script>
+</head>
+<body>
+   
+    <div class="page-head">    
+        <div class="logo"><a href="index.html"><img src="images/brews-bonds-logo-01.svg" alt="logo"></a></div> 
+        <button id="togglemenu">Expand Menu</button>
+        <div class="nav-menu">
+            <nav role="navigation">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="schedule.html">Events</a></li>
+                    <li><a href="info.html">About Us</a></li>
+                    <li><a href="ops.html">Operations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<main class="home-screen">
+    <h1>Events</h1>
+    <div class="borderline"></div>
+    <div class="event">
+        <div class="day">Monday</div>
+        <div class="descript"><h4>Morning Yoga Class:</h4>
+        <p>Start your week with a relaxing yoga session.</p>
+        <p style="font-style: italic;">8:00 pm - 9:00 pm</p>
+        </div>
+        <div class="descript"> <h4>Live Acoustic Music</h4>
+            <p>Enjoy soulful acoustic performances by local artists.</p>
+            <p style="font-style: italic;">7:00 pm - 9:00 pm</p>
+        </div>
+    </div>
+
+    <div class="event" style="background-color: #f8b686;">
+        <div class="day">Tuesday</div>
+        <div class="descript"><h4>Coffee Taasting Workshop:</h4>
+        <p>Learn about different brewing methods and taste various specialty coffees.</p>
+        <p style="font-style: italic;">8:00 am - 9:00 am</p>
+        </div>
+        <div class="descript"> <h4>Open Mic Night:</h4>
+            <p>E Showcase your own talents, or come enjoy the talents of other artists and performers</p>
+            <p style="font-style: italic;">7:00 pm - 9:00 pm</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="day">Wednesday</div>
+        <div class="descript"><h4>Art Exhibition</h4>
+        <p>Explore the works of local artists displayed throughout the coffee shop. </p>
+        <p style="font-style: italic;">All Day</p>
+        </div>
+        <div class="descript"> <h4>Trivia Night:</h4>
+            <p>Test your knowledge and compete with friends in a fun-filled trivia competition.</p>
+            <p style="font-style: italic;">7:00 pm - 9:00 pm</p>
+        </div>
+    </div>
+
+    <div class="event" style="background-color: #f8b686;">
+        <div class="day">Thursday</div>
+        <div class="descript"><h4>Cooking Class:</h4>
+        <p>Join our skilled chef and learn to prepare delicious desserts. Limited spots available, reservations required. </p>
+        <p style="font-style: italic;">5:00 pm - 7:00 pm</p>
+        </div>
+        <div class="descript"> <h4>Board Game Night</h4>
+            <p>Gather with friends and enjoy a variety of board games while sipping your favorite drinks.  </p>
+            <p style="font-style: italic;">6:00 pm - 9:00 pm</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="day">Friday</div>
+        <div class="descript"><h4>Live Jazz:</h4>
+            <p>Relax and unwind with the smooth tunes of a live jazz band. </p>
+            <p style="font-style: italic;">7:30 pm - 9:30 pm</p>
+        </div>
+        <div class="descript"> 
+
+        </div>
+    </div>
+
+    <div class="event" style="background-color: #f8b686;">
+        <div class="day">Saturday</div>
+        <div class="descript"><h4>Family Day:</h4>
+        <p>Bring your kids for a special day of face painting, storytelling, and fun activities. </p>
+        <p style="font-style: italic;">810:00 am - 2:00 pm</p>
+        </div>
+        <div class="descript"> <h4>Slam Poetry</h4>
+            <p>Express your creativity or listen to passionate poets share their work during our poetry slam event. </p>
+            <p style="font-style: italic;">7:00 PM - 9:00 PM</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="day">Sunday</div>
+        <div class="descript"><h4>Sunday Brunch</h4>
+        <p>Start your week with a relaxing yoga session.</p>
+        <p style="font-style: italic;">10:00 am - 2:00 pm</p>
+        </div>
+        <div class="descript"> <h4>Book Club:</h4>
+            <p>Discuss the latest book selection with fellow book enthusiasts over a cup of coffee.</p>
+            <p style="font-style: italic;">3:00 pm - 4:30 pm</p>
+        </div>
+    </div>
+</main>
+        
+    <script>
+        window.onload = () => {
+            const togglemenu = document.getElementById('togglemenu');
+            togglemenu.innerHTML = 'Expand Menu';
+            togglemenu.addEventListener('click', () => {
+            
+              document.body.classList.toggle('nav-open');
+              togglemenu.innerHTML = document.body.classList.contains('nav-open')
+                ? 'Close'
+                : 'Expand Menu';
+            });
+          };
+    
+    </script>
+</body>
+</html>

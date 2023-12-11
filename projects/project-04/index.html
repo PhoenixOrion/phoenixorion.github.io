@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quando">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <script src="my-script.js"></script>
+</head>
+<body>  
+   
+    <div class="page-head" style="margin-bottom: 0;">    
+        <div class="logo"><a href="index.html"><img src="images/brews-bonds-logo-01.svg" alt="logo"></a></div> 
+    <button id="togglemenu">Expand Menu</button>
+        <div class="nav-menu">
+            <nav role="navigation">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="schedule.html">Events</a></li>
+                    <li><a href="info.html">About Us</a></li>
+                    <li><a href="ops.html">Operations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="home-screen">
+        <div class="hero">
+            <div class="slogan">
+                <h1>Brews & Bonds</h1>
+                <h2>Taste comfort.</h2>
+            </div>
+        </div>
+        <div class="home-card">
+            <h3>Seasonal Feature</h3>
+            <h4>Cinnamon Dolce Muffin</h4>
+            <img src="images/spiced-muffin.jpg" alt="Cinammon Dolce Mufifn">
+            <div class="cst-button"><a class="button" href="menu.html">Order</a></div>
+        </div>
+        <div class="home-card" style="background-color: #f8b6b6;">
+            <h3>Curious About Our Hours?</h3>
+            <h4>Check out our business operations</h4>
+            <img src="images/coffee.jpg" alt="Business">
+            <div class="cst-button"><a class="button" href="ops.html">Visit Us</a></div>
+        </div>
+        <div class="home-card">
+            <h3>Upcoming Events</h3>
+            <h4>See what's happening this week</h4>
+            <img src="images/band.jpg" alt="Acoustic Act">
+            <div class="cst-button"><a class="button" href="schedule.html">View</a></div>
+        </div>
+    </main>
+    
+    <script>
+        window.onload = () => {
+            const togglemenu = document.getElementById('togglemenu');
+            togglemenu.innerHTML = 'Expand Menu';
+            togglemenu.addEventListener('click', () => {
+            
+              document.body.classList.toggle('nav-open');
+              togglemenu.innerHTML = document.body.classList.contains('nav-open')
+                ? 'Close'
+                : 'Expand Menu';
+            });
+          };
+    
+    </script>
+</body>
+</html>

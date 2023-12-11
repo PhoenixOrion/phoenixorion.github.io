@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quando">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overlock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <script src="my-script.js"></script>
+</head>
+<body>
+   
+    <div class="page-head">    
+        <div class="logo"><a href="index.html"><img src="images/brews-bonds-logo-01.svg" alt="logo"></a></div> 
+        <button id="togglemenu">Expand Menu</button>
+        <div class="nav-menu">
+            <nav role="navigation">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="schedule.html">Events</a></li>
+                    <li><a href="info.html">About Us</a></li>
+                    <li><a href="ops.html">Operations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <h1>Operations</h1>
+        <div class="borderline"></div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <img class="op-pic" src="images/cofee-shop.jpg" alt="Business front">
+            <div style="margin: 40px;">
+                <h3>Address:</h3>
+                <p>7795 Front Street <br>
+                    Harrisburg, Pennsylvania <br>
+                    17101</p>
+                    <h3>Phone:</h3>
+                <p>717-555-0112</p>
+            </div>
+            <img class="op-pic" style="border-color: #fec46e;" src="images/cafe-interior.jpg" alt="Business inside">
+        </div>
+        <div class="borderline"></div>
+
+        <div style="display: flex;">
+            <div class="ops-large">
+                <div class="day">Monday - Thursday</div>
+                <div class="time">5:00 AM - 11:00 PM</div>
+            </div>
+            <div class="ops-small">
+                <div class="day" style="width: 25%; padding-top: 55px;">Sunday</div>
+                <div class="time">8:00 AM - 10:00 PM</div>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div class="ops-large" style="background-color: #f8b6b6;">
+                <div class="day">Friday & Saturday</div>
+                <div class="time">7:00 AM - 12:00 AM</div>
+            </div>
+            <div class="ops-small" style="text-align: center; background-color: #fec46e;">
+                <div><h4 style="padding: 40px; width: 90%;">Closed on all national and federal holidays.</h4></div>
+            </div>
+        </div>
+
+        
+    </main>
+    <script>
+        window.onload = () => {
+            const togglemenu = document.getElementById('togglemenu');
+            togglemenu.innerHTML = 'Expand Menu';
+            togglemenu.addEventListener('click', () => {
+            
+              document.body.classList.toggle('nav-open');
+              togglemenu.innerHTML = document.body.classList.contains('nav-open')
+                ? 'Close'
+                : 'Expand Menu';
+            });
+          };
+    
+    </script>
+</body>
+</html>
