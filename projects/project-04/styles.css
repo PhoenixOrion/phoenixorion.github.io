@@ -12,6 +12,13 @@ img{
     border: 10px solid #f8b6b6;
     margin: 20px;
 }
+a:visited{
+    color: white;
+}
+a:hover{
+    color: #3974AA;
+}
+
 main{
     margin: 0 auto;
 justify-content: center;
