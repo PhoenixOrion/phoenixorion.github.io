@@ -332,9 +332,11 @@ justify-content: center;
 }
 #togglemenu{
     display: none;
-    height: 30px;
-    margin-top: 20px;
+    height: 40px;
+    margin-top: 30px;
     background-color: #3974AA;
+    border-top: 5px solid #22336f;
+    border-bottom: 5px solid #22336f;
     padding: 5px;
     font-family: Quando;
 }
