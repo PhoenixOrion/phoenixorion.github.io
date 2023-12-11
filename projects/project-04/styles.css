@@ -85,6 +85,7 @@ ul{
     width: 60px;
     height: 60px;
     padding: 10px;
+    padding-top: 20px;
 }
 .page-head{
     display: flex;
@@ -331,6 +332,7 @@ justify-content: center;
 }
 #togglemenu{
     display: none;
+    height: 30px;
     margin-top: 20px;
     background-color: #3974AA;
     padding: 5px;
